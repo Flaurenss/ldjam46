@@ -9,7 +9,9 @@ public class PlayerMovement : MonoBehaviour
 
     public void MovePlayer(Vector3 movement)
     {
-        var moveDir = movement.normalized * (playerSpeed * Time.deltaTime);
-        transform.position += moveDir;
+        if (movement == Vector3.zero) return;
+        if (movement.magnitude > 1) movement = movement.normalized;
+        var moveDir = movement * (playerSpeed * Time.deltaTime);
+        transform.Translate(moveDir);
     }
 }
