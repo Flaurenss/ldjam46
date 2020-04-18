@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 8749046284179721006}
   - component: {fileID: 8749046284179721002}
   - component: {fileID: 8749046284179721003}
-  - component: {fileID: 8749046284179721000}
   - component: {fileID: 8749046284179721001}
+  - component: {fileID: 6432537023706644687}
   m_Layer: 0
   m_Name: Placeholder_Player
   m_TagString: Player
@@ -146,20 +146,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
---- !u!114 &8749046284179721000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8749046284179721007}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e59788023aeadcf46bb6dbf6dc3b11ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dropKey: 113
-  pickKey: 102
 --- !u!114 &8749046284179721001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,3 +158,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f30f6f9ac3cd5d409e9edf93694c636, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6432537023706644687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8749046284179721007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28bfbcde8b913b242917a987e0ce6ac9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropKey: 102
+  pickKey: 113
+  minPickDistance: 2

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PickableBehaviour : MonoBehaviour
+public class KeyHintBehaviour : MonoBehaviour
 {
 
     GameObject keyHint;
@@ -20,9 +20,7 @@ public class PickableBehaviour : MonoBehaviour
     
     public void SetKeyHint(bool state)
     {
-        Debug.Log("Setting key hint: " + state);
         keyAnimator.SetBool("Hidden", !state);
-       
     }
 
 }
