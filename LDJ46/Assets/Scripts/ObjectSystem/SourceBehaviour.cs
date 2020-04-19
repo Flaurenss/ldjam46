@@ -9,6 +9,7 @@ public class SourceBehaviour : MonoBehaviour
     public Vector2 direction;
     public Vector2 offset;
     public float intensity;
+    public float maxItems;
 
     public void Dispense()
     {

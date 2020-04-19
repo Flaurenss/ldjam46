@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2170947928135392191}
   - component: {fileID: 2170947928135392190}
   m_Layer: 0
-  m_Name: Placeholder_ObjectSource
+  m_Name: Generic_ObjectSource
   m_TagString: Source
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

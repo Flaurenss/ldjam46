@@ -6,6 +6,7 @@ public class Pocket : MonoBehaviour
 {
 
     private GameObject currentObject;
+    
     public GameObject CurrentObject
     {
         get { return currentObject;  }
