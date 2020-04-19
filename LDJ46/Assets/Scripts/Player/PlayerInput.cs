@@ -7,6 +7,7 @@ public class PlayerInput : MonoBehaviour
 {
     private PlayerMovement _playerMovement;
     private Vector2 _playerInput;
+    private SpriteRenderer _spriteRenderer;
 
     private void Awake()
     {
