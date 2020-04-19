@@ -12,6 +12,7 @@ public class GameEvent
     public int m_type;
     [SerializeField]
     private float m_startTime;
+    [SerializeField]
     private float m_duration;
 
     public GameEvent(int type, float duration, Transform target)

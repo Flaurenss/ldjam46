@@ -66,15 +66,42 @@ public class EventsManager : MonoBehaviour
             float value = m_activeEvents[i].checkExpiration();
             if (value == 0)
             {
-                handleEventExpiration(m_activeEvents[i]);
+                exipireEvent(m_activeEvents[i]);
             }
         }
     }
 
-    private void handleEventExpiration(GameEvent gameEvent)
+    // Checks in the list of active game events if there is any event with the passed itemId and target transform
+    // If succcessful: complete found event and return true
+    // If no event found: return false
+    // <param><c>itemId</c> Identifier of the item currently in the player's inventory</param>
+    // <param><c>interactionTarget</c> Transform of the gameObject being interacted with</param>
+    public bool checkEventCompletable (int itemId, Transform interactionTarget) {
+        foreach (GameEvent gameEvent in m_activeEvents) {
+            if (
+                gameEvent.m_type == itemId && 
+                gameEvent.m_target == interactionTarget && 
+                gameEvent.checkExpiration() > 0
+            ) {
+                completeEvent(gameEvent);
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    private void completeEvent(GameEvent ev) {
+        // TODO: define actions when an event is completed: add score, play sounds...
+        m_activeEvents.Remove(ev);
+        Debug.Log("Event completed");
+    }
+
+    private void exipireEvent(GameEvent gameEvent)
     {
+        // TODO: do something when an event's time runs out: lose the game, substract score...
         m_activeEvents.Remove(gameEvent);
-        Debug.Log("event expired");
+        Debug.Log("Event expired");
     }
 
 
@@ -101,6 +128,7 @@ public class EventsManager : MonoBehaviour
     private int pickEventType()
     {
         // TODO: refine logic for pickng a type instead of pure random?
+        // TODO: there should not be 2 events of the same type with the same target
         return Random.Range(0, 2);
     }
 
