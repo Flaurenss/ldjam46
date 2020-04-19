@@ -12,8 +12,9 @@ public class FloatUnityEvent : UnityEvent<float> {}
 public class EventsManager : MonoBehaviour
 {
     /*** Public Events ***/
-    FloatUnityEvent gameEventCompleted = new FloatUnityEvent();
-    UnityEvent gameEventFailed = new UnityEvent();
+    public FloatUnityEvent gameEventCompleted = new FloatUnityEvent();
+    public UnityEvent gameEventFailed = new UnityEvent();
+    
 
     /*** CONFIGURATION ***/
     [SerializeField]
