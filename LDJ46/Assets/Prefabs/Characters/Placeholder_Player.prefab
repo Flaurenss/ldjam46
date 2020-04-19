@@ -188,7 +188,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerSpeed: 8
   playerSprite: {fileID: 8749046284179721005}
-  defaultSprite: {fileID: -1440306734041708082, guid: da141a7cdf8bd414b9b74f8f326f1b3e,
+  defaultSprite: {fileID: 7153434630965650872, guid: da141a7cdf8bd414b9b74f8f326f1b3e,
     type: 3}
   movementSprite: {fileID: -1440306734041708082, guid: da141a7cdf8bd414b9b74f8f326f1b3e,
     type: 3}

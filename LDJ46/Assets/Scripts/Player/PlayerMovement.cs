@@ -45,16 +45,37 @@ public class PlayerMovement : MonoBehaviour
 
     private void CheckSpriteType(Vector2 movement)
     {
-        if (_movementSprite == movementSprite && movement == Vector2.zero)
-        {
-            playerSprite.sprite = defaultSprite;
-            return;
-        }
-        Debug.Log(movement);
-        _movementSprite = _playerPocket.CurrentType == ItemsSingleton.ItemType.PILL ? pillsSprite :
-            _playerPocket.CurrentType == ItemsSingleton.ItemType.BLOOD ? bloodSprite :
-             movementSprite;
-        playerSprite.sprite = _movementSprite;
+        // if (_movementSprite == movementSprite && movement == Vector2.zero
+        //  && _playerPocket.Empty)
+        // {
+        //     playerSprite.sprite = defaultSprite;
+        //     return;
+        // }
+        // if (movement.y < 0 && _playerPocket.Empty)
+        // {
+        //     _movementSprite = defaultSprite;
+        // }
+        playerSprite.sprite = GetCarrySprite(movement);
 
+    }
+
+    private Sprite GetCarrySprite(Vector2 dir)
+    {
+        Debug.Log(dir);
+        switch (_playerPocket.CurrentType)
+        {
+            case ItemsSingleton.ItemType.PILL:
+                return pillsSprite;
+                break;
+            case ItemsSingleton.ItemType.BLOOD:
+                return bloodSprite;
+                break;
+            case ItemsSingleton.ItemType.NONE:
+                if (dir == Vector2.zero || dir.y < 0 && dir.x == 0 ) return defaultSprite;
+                return movementSprite;
+                    break;
+            default:
+                return movementSprite;
+        }
     }
 }
