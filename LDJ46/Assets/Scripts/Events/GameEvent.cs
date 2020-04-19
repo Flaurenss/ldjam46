@@ -42,7 +42,7 @@ public class GameEvent
                 m_warningSoundPlayed = true;
             }
             catch {
-                Debug.LogError("Error: No audio source attached to vampire" + m_target);
+                Debug.LogWarning("Error: No audio source attached to vampire" + m_target);
             }
         }
 

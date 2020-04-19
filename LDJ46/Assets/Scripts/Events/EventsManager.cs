@@ -127,6 +127,7 @@ public class EventsManager : MonoBehaviour
         Transform target = pickEventTarget();
         GameEvent newEvent = new GameEvent(pickEventType(), calculateEventDuration(), target, m_eventsWarningThreshold);
         m_activeEvents.Add(newEvent);
+        target.gameObject.GetComponent<VampireGameEventRef>().LinkedGameEvent = newEvent;
     }
 
     private float calculateEventDuration()
