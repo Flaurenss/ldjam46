@@ -2135,7 +2135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vampireSpeed: 2
-  freqToMove: 200
+  freqToMove: 2
 --- !u!212 &1740444912
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2449,7 +2449,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vampireSpeed: 2
-  freqToMove: 200
+  freqToMove: 3
 --- !u!212 &1887035184
 SpriteRenderer:
   m_ObjectHideFlags: 0
