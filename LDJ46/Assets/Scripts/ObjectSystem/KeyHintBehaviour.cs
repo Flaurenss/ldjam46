@@ -6,17 +6,20 @@ using UnityEngine.UI;
 public class KeyHintBehaviour : MonoBehaviour
 {
 
-    GameObject keyHint;
+    GameObject keyHintGameObject;
     Animator keyAnimator;
 
     void Awake()
     {
-        keyHint = transform.Find("HintCanvas").Find("KeyHint").gameObject;
-        keyAnimator = keyHint.GetComponent<Animator>();
+        var HintCanvas = transform.Find("HintCanvas");
+
+        var KeyHint = HintCanvas.Find("KeyHint");
+
+        keyHintGameObject = KeyHint.gameObject;
+
+        keyAnimator = keyHintGameObject.GetComponent<Animator>();
         SetKeyHint(true);
     }
-
-
     
     public void SetKeyHint(bool state)
     {

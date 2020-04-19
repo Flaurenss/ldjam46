@@ -14,7 +14,8 @@ public class SourceBehaviour : MonoBehaviour
     public void Dispense()
     {
         GameObject clone = Instantiate(objectPrefab, this.transform.position, Quaternion.identity);
-        clone.GetComponent<Rigidbody2D>().AddForce(direction.normalized + offset * intensity);
+        clone.GetComponent<Rigidbody2D>().
+            AddRelativeForce(direction.normalized + offset * intensity,ForceMode2D.Impulse);
     }
 
 }
