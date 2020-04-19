@@ -186,7 +186,7 @@ PrefabInstance:
     - target: {fileID: 8749046284179721007, guid: d7817aede006d4245a7b92bdad891202,
         type: 3}
       propertyPath: m_Name
-      value: Placeholder_Player
+      value: Placeholder_player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7817aede006d4245a7b92bdad891202, type: 3}
@@ -564,8 +564,102 @@ PrefabInstance:
       propertyPath: m_Name
       value: BloodSource
       objectReference: {fileID: 0}
+    - target: {fileID: 5089522300914484238, guid: bc043fe3489503941bb3a3386cbe5709,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.129
+      objectReference: {fileID: 0}
+    - target: {fileID: 5089522300914484238, guid: bc043fe3489503941bb3a3386cbe5709,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -1.176
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc043fe3489503941bb3a3386cbe5709, type: 3}
+--- !u!1001 &1797629649
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 594953523781073696, guid: 32fe28a424dce3643b47bce34e19bfd7,
+        type: 3}
+      propertyPath: m_Name
+      value: Generic_Vampire
+      objectReference: {fileID: 0}
+    - target: {fileID: 594953523781073727, guid: 32fe28a424dce3643b47bce34e19bfd7,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 594953523781073727, guid: 32fe28a424dce3643b47bce34e19bfd7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 594953523781073727, guid: 32fe28a424dce3643b47bce34e19bfd7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 594953523781073727, guid: 32fe28a424dce3643b47bce34e19bfd7,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 594953523781073727, guid: 32fe28a424dce3643b47bce34e19bfd7,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 594953523781073727, guid: 32fe28a424dce3643b47bce34e19bfd7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 594953523781073727, guid: 32fe28a424dce3643b47bce34e19bfd7,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 594953523781073727, guid: 32fe28a424dce3643b47bce34e19bfd7,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 594953523781073727, guid: 32fe28a424dce3643b47bce34e19bfd7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 594953523781073727, guid: 32fe28a424dce3643b47bce34e19bfd7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 594953523781073727, guid: 32fe28a424dce3643b47bce34e19bfd7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2476786084127066967, guid: 32fe28a424dce3643b47bce34e19bfd7,
+        type: 3}
+      propertyPath: m_Name
+      value: CanvasSpeech
+      objectReference: {fileID: 0}
+    - target: {fileID: 5290742145324318379, guid: 32fe28a424dce3643b47bce34e19bfd7,
+        type: 3}
+      propertyPath: m_Name
+      value: Speech
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113617085812282354, guid: 32fe28a424dce3643b47bce34e19bfd7,
+        type: 3}
+      propertyPath: m_Name
+      value: Blood
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 32fe28a424dce3643b47bce34e19bfd7, type: 3}
 --- !u!1 &1933130773
 GameObject:
   m_ObjectHideFlags: 0
