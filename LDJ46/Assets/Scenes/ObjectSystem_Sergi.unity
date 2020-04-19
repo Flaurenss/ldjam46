@@ -507,12 +507,12 @@ PrefabInstance:
     - target: {fileID: 1666793028830462776, guid: bc043fe3489503941bb3a3386cbe5709,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.57
+      value: 5.2
       objectReference: {fileID: 0}
     - target: {fileID: 1666793028830462776, guid: bc043fe3489503941bb3a3386cbe5709,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.83
+      value: 2.46
       objectReference: {fileID: 0}
     - target: {fileID: 1666793028830462776, guid: bc043fe3489503941bb3a3386cbe5709,
         type: 3}
@@ -563,31 +563,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BloodSource
-      objectReference: {fileID: 0}
-    - target: {fileID: 1666793028830462781, guid: bc043fe3489503941bb3a3386cbe5709,
-        type: 3}
-      propertyPath: offset.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1666793028830462781, guid: bc043fe3489503941bb3a3386cbe5709,
-        type: 3}
-      propertyPath: offset.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1666793028830462781, guid: bc043fe3489503941bb3a3386cbe5709,
-        type: 3}
-      propertyPath: direction.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1666793028830462781, guid: bc043fe3489503941bb3a3386cbe5709,
-        type: 3}
-      propertyPath: intensity
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1666793028830462783, guid: bc043fe3489503941bb3a3386cbe5709,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc043fe3489503941bb3a3386cbe5709, type: 3}
@@ -664,11 +639,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5434008859015045034, guid: 596a7daaeb67f4241a4b504c776812d0,
-        type: 3}
-      propertyPath: direction.x
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5434008859015045036, guid: 596a7daaeb67f4241a4b504c776812d0,
         type: 3}
       propertyPath: m_Name
