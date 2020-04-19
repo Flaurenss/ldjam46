@@ -39,6 +39,8 @@ public class EventsManager : MonoBehaviour
     /*** STATE ***/
     [SerializeField]
     List<GameEvent> m_activeEvents = new List<GameEvent>();
+    
+   
     float m_nextEventTime;
     bool m_eventsActive = false;
 
@@ -125,9 +127,13 @@ public class EventsManager : MonoBehaviour
     private void addRandomEvent()
     {
         Transform target = pickEventTarget();
-        GameEvent newEvent = new GameEvent(pickEventType(), calculateEventDuration(), target, m_eventsWarningThreshold);
+        if (target == null) return;
+
+        Debug.Log("Picking target: " + target.name);
+        int type = pickEventType();
+        GameEvent newEvent = new GameEvent(type, calculateEventDuration(), target, m_eventsWarningThreshold);
         m_activeEvents.Add(newEvent);
-        target.gameObject.GetComponent<VampireGameEventRef>().LinkedGameEvent = newEvent;
+        target.gameObject.GetComponent<VampireGameEventRef>().AddEvent(newEvent);  
     }
 
     private float calculateEventDuration()
@@ -139,14 +145,27 @@ public class EventsManager : MonoBehaviour
     private Transform pickEventTarget()
     {
         // TODO: refine logic for pickng a target instead of pure random?
-        return m_eventTargets[Random.Range(0, m_eventTargets.Count)];
+        List<Transform> availableTargets = new List<Transform>();
+        foreach (Transform t in m_eventTargets)
+        {
+            VampireGameEventRef ev = t.GetComponent<VampireGameEventRef>();
+            if (ev != null && ev.EventCount < ev.MaxGameSpeeches)
+            {
+                availableTargets.Add(t);
+            }
+        }
+
+        Debug.Log("There are " + availableTargets.Count + " targets available");
+        if (availableTargets.Count == 0) return null;
+
+        return availableTargets[Random.Range(0, availableTargets.Count)];
     }
 
     private int pickEventType()
     {
         // TODO: refine logic for pickng a type instead of pure random?
         // TODO: there should not be 2 events of the same type with the same target
-        return Random.Range(0, 2);
+        return Random.Range(1, 3);
     }
 
     void OnDrawGizmos (){
