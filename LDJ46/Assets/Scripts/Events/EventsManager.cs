@@ -7,6 +7,10 @@ public class EventsManager : MonoBehaviour
 {
     /*** CONFIGURATION ***/
     [SerializeField]
+    List<Transform> m_eventTargets = new List<Transform>();
+
+    [Header("Timer ranges")]
+    [SerializeField]
     float m_maxTimeForNextEvent = 5;
     [SerializeField]
     float m_minTimeForNextEvent = 3;
@@ -17,7 +21,8 @@ public class EventsManager : MonoBehaviour
     float m_minEventDuration = 6;
 
     [SerializeField]
-    List<Transform> m_eventTargets = new List<Transform>();
+    [Range(0,1)]
+    private float m_eventsWarningThreshold = 0.5f;
 
 
     /*** STATE ***/
@@ -109,7 +114,7 @@ public class EventsManager : MonoBehaviour
     private void addRandomEvent()
     {
         Transform target = pickEventTarget();
-        GameEvent newEvent = new GameEvent(pickEventType(), calculateEventDuration(), target);
+        GameEvent newEvent = new GameEvent(pickEventType(), calculateEventDuration(), target, m_eventsWarningThreshold);
         m_activeEvents.Add(newEvent);
     }
 
