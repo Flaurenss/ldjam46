@@ -11,19 +11,27 @@ public class KeyHintBehaviour : MonoBehaviour
 
     void Awake()
     {
-        var HintCanvas = transform.Find("HintCanvas");
+        Transform HintCanvas = transform.Find("HintCanvas");
+        Transform KeyHint = null;
 
-        var KeyHint = HintCanvas.Find("KeyHint");
+        if(HintCanvas != null)
+            KeyHint = HintCanvas.Find("KeyHint");
 
-        keyHintGameObject = KeyHint.gameObject;
+        if (KeyHint != null)
+            keyHintGameObject = KeyHint.gameObject;
 
-        keyAnimator = keyHintGameObject.GetComponent<Animator>();
-        SetKeyHint(true);
+        if (keyHintGameObject != null)
+            keyAnimator = keyHintGameObject.GetComponent<Animator>();
+
+        SetKeyHint(false);
     }
     
     public void SetKeyHint(bool state)
     {
-        keyAnimator.SetBool("Hidden", !state);
+        if (keyAnimator != null)
+            keyAnimator.SetBool("Hidden", !state);
+        else
+            Debug.LogWarning("KeyAnimator is null (" + name + ")");
     }
 
 }
