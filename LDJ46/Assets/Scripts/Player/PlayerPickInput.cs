@@ -21,7 +21,15 @@ public class PlayerPickInput : MonoBehaviour
     {
         closestInteractuable = GetClosestInteractuable();
         if (closestInteractuable != null)
-            this.closestInteractuable.GetComponent<KeyHintBehaviour>().SetKeyHint(pocket.Empty);
+        {
+            var script = this.closestInteractuable.GetComponent<KeyHintBehaviour>();
+            if (script == null)
+            {
+                Debug.LogWarning(closestInteractuable.name + " do not has a KeyHintBehaviour");
+            }
+
+             script.SetKeyHint(pocket.Empty);
+        }
         
         
 
