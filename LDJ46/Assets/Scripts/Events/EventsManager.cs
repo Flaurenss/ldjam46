@@ -1,10 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+
+
+// Event type for int events
+[System.Serializable]
+public class FloatUnityEvent : UnityEvent<float> {}
 
 
 public class EventsManager : MonoBehaviour
 {
+    /*** Public Events ***/
+    FloatUnityEvent gameEventCompleted = new FloatUnityEvent();
+    UnityEvent gameEventFailed = new UnityEvent();
+
     /*** CONFIGURATION ***/
     [SerializeField]
     List<Transform> m_eventTargets = new List<Transform>();
@@ -99,14 +109,14 @@ public class EventsManager : MonoBehaviour
     private void completeEvent(GameEvent ev) {
         // TODO: define actions when an event is completed: add score, play sounds...
         m_activeEvents.Remove(ev);
-        Debug.Log("Event completed");
+        gameEventCompleted.Invoke(ev.checkExpiration());
     }
 
     private void exipireEvent(GameEvent gameEvent)
     {
         // TODO: do something when an event's time runs out: lose the game, substract score...
         m_activeEvents.Remove(gameEvent);
-        Debug.Log("Event expired");
+        gameEventFailed.Invoke();
     }
 
 
