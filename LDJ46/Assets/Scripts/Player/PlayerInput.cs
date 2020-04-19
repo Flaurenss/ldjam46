@@ -15,7 +15,7 @@ public class PlayerInput : MonoBehaviour
 
     private void Update()
     {
-        _playerInput =  new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        _playerInput =  new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
     }
 
     private void FixedUpdate()

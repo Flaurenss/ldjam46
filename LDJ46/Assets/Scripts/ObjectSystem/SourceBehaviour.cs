@@ -5,17 +5,93 @@ using UnityEngine;
 public class SourceBehaviour : MonoBehaviour
 {
 
-    public GameObject objectPrefab;
-    public Vector2 direction;
-    public Vector2 offset;
-    public float intensity;
-    public float maxItems;
+    public ItemsSingleton.ItemType objectType;
+    public GameObject prefab;
 
-    public void Dispense()
+    public float rechargingSeconds = 5.0f;
+    private float rechargingTimer = 0.0f;
+    private bool objectAvailable;
+    private bool recharging;
+    private Animator animator;
+
+    public bool InteractAvailable
     {
-        GameObject clone = Instantiate(objectPrefab, this.transform.position, Quaternion.identity);
-        clone.GetComponent<Rigidbody2D>().
-            AddRelativeForce(direction.normalized + offset * intensity,ForceMode2D.Impulse);
+        get { return objectAvailable || (!objectAvailable && !recharging); }
+    }
+
+    void Awake()
+    {
+        animator = GetComponent<Animator>();
+        
+    }
+
+
+    void Start()
+    {
+        recharging = false;
+        rechargingTimer = 0.0f;
+    }
+
+    void Update()
+    {
+
+        if (recharging)
+        {
+            rechargingTimer += Time.deltaTime;
+            if (rechargingTimer >= rechargingSeconds)
+            {
+                Debug.Log("Object available");
+                objectAvailable = true;
+                recharging = false;
+
+              
+
+                rechargingTimer = 0.0f;
+            }
+        }
+
+       
+    
+    }
+
+    
+
+    public void Interact(ref Pocket p)
+    {
+        if (objectAvailable)
+        {
+            if (!p.Empty) return;
+
+            Dispense(ref p);
+            objectAvailable = false;
+            recharging = false;
+        }
+        else if (!recharging)
+        {
+            if (animator != null)
+            {
+                animator.SetTrigger("StartCharging");
+                animator.speed = 1.0f / rechargingSeconds;
+            }
+            recharging = true;
+        }
+
+    }
+
+
+
+    private void Dispense(ref Pocket p)
+    {
+        if (animator != null)
+        {
+            animator.SetTrigger("Dispense");
+            animator.speed = 1.0f;
+        }
+
+        GameObject clone = Instantiate(prefab, p.transform.position, Quaternion.identity);
+        p.CurrentType = objectType;
+        p.CurrentObject = clone;
+        clone.SetActive(false);
     }
 
 }

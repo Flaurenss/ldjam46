@@ -160,7 +160,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dropKey: 113
   interactKey: 102
-  minPickDistance: 2
+  minPickDistance: 3
 --- !u!114 &430837001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,4 +185,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 549aaeaf341a1634c88b0e4a9cc760c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 10
+  playerSpeed: 8

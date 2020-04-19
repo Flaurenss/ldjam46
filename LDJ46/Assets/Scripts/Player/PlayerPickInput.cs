@@ -14,6 +14,7 @@ public class PlayerPickInput : MonoBehaviour
     void Awake()
     {
         pocket = GetComponent<Pocket>();
+
     }
 
     // Update is called once per frame
@@ -23,12 +24,13 @@ public class PlayerPickInput : MonoBehaviour
         if (closestInteractuable != null)
         {
             var script = this.closestInteractuable.GetComponent<KeyHintBehaviour>();
-            if (script == null)
-            {
-                Debug.LogWarning(closestInteractuable.name + " do not has a KeyHintBehaviour");
-            }
+            script.SetKeyHint(pocket.Empty);
 
-             script.SetKeyHint(pocket.Empty);
+
+            if (script.CompareTag("Source"))
+            {
+                script.SetKeyHint(script.GetComponent<SourceBehaviour>().InteractAvailable);
+            }
         }
         
         
@@ -36,9 +38,13 @@ public class PlayerPickInput : MonoBehaviour
         if (Input.GetKeyDown(interactKey) && closestInteractuable != null)
         {
             if (closestInteractuable.CompareTag("Pickable"))
-                pocket.CurrentObject = closestInteractuable;
-            else if (closestInteractuable.CompareTag("Source") && pocket.Empty)
-                closestInteractuable.GetComponent<SourceBehaviour>().Dispense();
+            {
+                this.pocket.CurrentType = closestInteractuable.GetComponent<ObjectItemProperty>().type;
+                this.pocket.CurrentObject = closestInteractuable.gameObject;
+                this.pocket.CurrentObject.SetActive(false);
+            }
+            else if (closestInteractuable.CompareTag("Source"))
+                closestInteractuable.GetComponent<SourceBehaviour>().Interact(ref pocket);
                 
             return;
         }

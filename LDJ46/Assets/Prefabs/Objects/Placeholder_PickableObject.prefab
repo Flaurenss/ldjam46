@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2510240037563224964}
   - component: {fileID: 2510240037563224971}
   - component: {fileID: 6232397375484930641}
+  - component: {fileID: 6192182750582101419}
   m_Layer: 0
   m_Name: Placeholder_PickableObject
   m_TagString: Pickable
@@ -31,7 +32,7 @@ Transform:
   m_LocalPosition: {x: 5.639, y: 1.984, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children:
-  - {fileID: 2078040247893534493}
+  - {fileID: 2373985281039181090}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -144,7 +145,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fde56875b00118469788621cc57f7ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &2369613680323947588
+--- !u!114 &6192182750582101419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2510240037563224967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f620bfddf9688b64f952241c6d34b279, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
+--- !u!1001 &2073404632174784123
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -281,12 +295,27 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5191266976147408813, guid: f3d1569734c93004ca98bc8077b2dd9e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6208935458473036954, guid: f3d1569734c93004ca98bc8077b2dd9e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7186925932427406042, guid: f3d1569734c93004ca98bc8077b2dd9e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 897436035336194822, guid: f3d1569734c93004ca98bc8077b2dd9e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f3d1569734c93004ca98bc8077b2dd9e, type: 3}
---- !u!224 &2078040247893534493 stripped
+--- !u!224 &2373985281039181090 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4338129235139218265, guid: f3d1569734c93004ca98bc8077b2dd9e,
     type: 3}
-  m_PrefabInstance: {fileID: 2369613680323947588}
+  m_PrefabInstance: {fileID: 2073404632174784123}
   m_PrefabAsset: {fileID: 0}
