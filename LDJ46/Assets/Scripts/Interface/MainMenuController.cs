@@ -19,6 +19,11 @@ public class MainMenuController : MonoBehaviour
         SceneManager.LoadScene("GameOver");
     }
 
+    public void Quit()
+    {
+        Application.Quit();
+    }
+
     public void LoadIntro()
     {
         SceneManager.LoadScene("Introduction");
