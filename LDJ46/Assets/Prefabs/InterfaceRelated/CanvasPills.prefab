@@ -12,6 +12,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pills
       objectReference: {fileID: 0}
+    - target: {fileID: 2616593931070518009, guid: 6c6dd64c1c47e0e49b4eeac67eaf879d,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2669669207156122050, guid: 6c6dd64c1c47e0e49b4eeac67eaf879d,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: a733b00291233b24985dc523254702d6, type: 2}
     - target: {fileID: 3745708900522158415, guid: 6c6dd64c1c47e0e49b4eeac67eaf879d,
         type: 3}
       propertyPath: m_LocalPosition.x

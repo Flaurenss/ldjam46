@@ -16,11 +16,11 @@ public class VampireGameEventRef : MonoBehaviour
     public bool [] flip = { false, true };
     public GameEvent [] linkedGameEvent = { null, null };
     private GameObject [] speechCanvas = { null, null };
-    
+
+
     public int MaxGameSpeeches { get; private set; }
     void Awake()
     {
-
         eventsManager = GameObject.Find("EventsManager").GetComponent<EventsManager>();
         MaxGameSpeeches = 2;
         for (int i = 0; i<MaxGameSpeeches; i++)
@@ -88,9 +88,17 @@ public class VampireGameEventRef : MonoBehaviour
                 speechCanvas[i].transform.localPosition = Vector3.zero + offset[i];
 
                 if (flip[i])
+                {
                     speechCanvas[i].transform.localScale =
-                        new Vector3(-speechCanvas[i].transform.localScale.x,
-                        speechCanvas[i].transform.localScale.y);
+                        new Vector3
+                            (-speechCanvas[i].transform.localScale.x,
+                            speechCanvas[i].transform.localScale.y);
+
+                    var CheckGO = speechCanvas[i].transform.Find("Check");
+                    var CheckTransform = CheckGO.transform;
+
+                    CheckTransform.Translate(new Vector3(-1, 0), Space.Self);
+                }
             }
 
             if (linkedGameEvent[i] != null && linkedGameEvent[i].checkExpiration() == 0)
@@ -98,7 +106,7 @@ public class VampireGameEventRef : MonoBehaviour
 
             if (linkedGameEvent[i] == null && speechCanvas != null)
             {
-                Destroy(speechCanvas[i]);
+                Destroy(speechCanvas[i], 1.0f);
                 speechCanvas[i] = null;
             }
         }
@@ -110,6 +118,8 @@ public class VampireGameEventRef : MonoBehaviour
         {
             if (linkedGameEvent[i] == gameEvent)
             {
+                speechCanvas[i].GetComponent<Animator>().SetTrigger("Check");
+
                 Debug.Log("Se ha completado un evento mio");
                 linkedGameEvent[i].Completed = true;
                 linkedGameEvent[i] = null;
