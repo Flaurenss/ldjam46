@@ -8,7 +8,7 @@ public class PunctuationSystem : MonoBehaviour
 {
     [SerializeField] private EventsManager eventsManager;
     [SerializeField] private TextMeshProUGUI uiPunctuation;
-    private int _punctuation;
+    private static int _punctuation;
 
     private void Awake()
     {
@@ -26,5 +26,9 @@ public class PunctuationSystem : MonoBehaviour
     private void ChangePunctuation(int points)
     {
         uiPunctuation.text = points.ToString();
+    }
+
+    public static int GetScore() {
+        return _punctuation;
     }
 }
