@@ -26,7 +26,7 @@ public class MainMenuController : MonoBehaviour
 
     public void LoadIntro()
     {
-        SceneManager.LoadScene("Introduction");
+        SceneManager.LoadScene("IntroTraducida");
     }
 
     public void LoadGame()

@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main.unity
     guid: 1e4bb44a6e3687b4b9b49da365dc91a8
+  - enabled: 1
+    path: Assets/Scenes/IntroTraducida.unity
+    guid: 98f1ec5b8ad26fd40a3f47718b024d11
   m_configObjects: {}
