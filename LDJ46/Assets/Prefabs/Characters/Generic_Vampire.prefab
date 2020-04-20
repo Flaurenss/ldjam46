@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 594953523781073697}
   - component: {fileID: 594953523781073725}
   - component: {fileID: 594953523781073724}
+  - component: {fileID: 1044119903}
   m_Layer: 0
   m_Name: Generic_Vampire
   m_TagString: Vampire
@@ -136,7 +137,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.36, y: 1.36}
+    oldSize: {x: 1.088, y: 1.088}
     newSize: {x: 1.36, y: 1.36}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -145,3 +146,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.36, y: 1.36}
   m_EdgeRadius: 0
+--- !u!114 &1044119903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 594953523781073696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6353e7a4531b814e8a4f62bb9a8378a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabBloodCanvas: {fileID: 4853436518696182220, guid: 6c6dd64c1c47e0e49b4eeac67eaf879d,
+    type: 3}
+  prefabPillsCanvas: {fileID: 3952372276344295035, guid: feae7b1a51e2fd24f9d15c118e7abdd8,
+    type: 3}
