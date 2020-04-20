@@ -22,5 +22,12 @@ public class Pocket : MonoBehaviour
         CurrentObject.SetActive(true);
     }
 
+    public void DoEmpty()
+    {
+        Destroy(CurrentObject);
+        CurrentObject = null;
+        CurrentType = ItemsSingleton.ItemType.NONE;
+    }
+
     
 }

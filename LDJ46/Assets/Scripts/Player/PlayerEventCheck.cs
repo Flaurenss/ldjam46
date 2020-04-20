@@ -7,11 +7,13 @@ public class PlayerEventCheck : MonoBehaviour
     Pocket p;
     EventsManager eventsManager;
     public float minDistance = 2.0f;
+    Animator errorAnimator;
 
     void Awake()
     {
         eventsManager = GameObject.Find("EventsManager").GetComponent<EventsManager>();
         p = GetComponent<Pocket>();
+        errorAnimator = GetComponent<Animator>();
     }
 
     void Start()
@@ -34,14 +36,24 @@ public class PlayerEventCheck : MonoBehaviour
             bool check = eventsManager.checkEventCompletable((int)pocketItem, vampire.transform);
             if (check)
             {
-                // Empty pocket
-                Destroy(p.CurrentObject);
-                p.CurrentObject = null;
-                p.CurrentType = ItemsSingleton.ItemType.NONE;
+                p.DoEmpty();
+                //Success
                 return;
+            }
+            else
+            {
+                int vampEvents = vampire.GetComponent<VampireGameEventRef>().EventCount;
+                if (vampEvents > 0)
+                {
+                    errorAnimator.SetTrigger("Error");
+                    vampire.GetComponent<AudioSource>().Play();
+                    p.DoEmpty();
+                }
             }
         }
     }
+
+   
 
     void OnDrawGizmos()
     {
