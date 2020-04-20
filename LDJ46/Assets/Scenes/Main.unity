@@ -1022,8 +1022,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -224982875
+  m_SortingLayer: -2
   m_SortingOrder: 0
   m_Sprite: {fileID: -4928349905066675033, guid: e400094a1396bbe43bd217f88b172c01,
     type: 3}
@@ -2133,8 +2133,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -224982875
+  m_SortingLayer: -2
   m_SortingOrder: 0
   m_Sprite: {fileID: 407117943545423985, guid: e400094a1396bbe43bd217f88b172c01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2759,8 +2759,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -224982875
+  m_SortingLayer: -2
   m_SortingOrder: 0
   m_Sprite: {fileID: -5898522907623624953, guid: e400094a1396bbe43bd217f88b172c01,
     type: 3}
@@ -3067,8 +3067,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -224982875
+  m_SortingLayer: -2
   m_SortingOrder: 0
   m_Sprite: {fileID: -213601592502135325, guid: e400094a1396bbe43bd217f88b172c01,
     type: 3}
@@ -3744,8 +3744,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -224982875
+  m_SortingLayer: -2
   m_SortingOrder: 0
   m_Sprite: {fileID: 7779619877792292303, guid: e400094a1396bbe43bd217f88b172c01,
     type: 3}
@@ -5031,7 +5031,7 @@ PrefabInstance:
     - target: {fileID: 6406899744594534770, guid: c3dfc9aaa3ba6884082515cddf0d4cc0,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.18
+      value: 9.52
       objectReference: {fileID: 0}
     - target: {fileID: 6406899744594534770, guid: c3dfc9aaa3ba6884082515cddf0d4cc0,
         type: 3}

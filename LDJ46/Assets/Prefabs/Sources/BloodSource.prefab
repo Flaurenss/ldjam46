@@ -395,16 +395,6 @@ PrefabInstance:
       propertyPath: m_Pivot.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5737866712943369357, guid: 920ee596c6a39274780a5f8562dc76db,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0.24
-      objectReference: {fileID: 0}
-    - target: {fileID: 5737866712943369357, guid: 920ee596c6a39274780a5f8562dc76db,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -0.82
-      objectReference: {fileID: 0}
     - target: {fileID: 6408024601320439893, guid: 920ee596c6a39274780a5f8562dc76db,
         type: 3}
       propertyPath: m_fontSize
