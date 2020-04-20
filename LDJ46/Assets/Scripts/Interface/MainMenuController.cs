@@ -7,9 +7,14 @@ public class MainMenuController : MonoBehaviour
     { 
     }
 
+    public void LoadIntro()
+    {
+        SceneManager.LoadScene("Introduction");
+    }
+
     public void LoadGame()
     {
-        SceneManager.LoadScene("ObjectSystem_Sergi");
+        SceneManager.LoadScene("MainGame");
     }
 
     public void LoadMainMenu()
