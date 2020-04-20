@@ -73,14 +73,12 @@ public class VampireGameEventRef : MonoBehaviour
             }
         }
 
-        Debug.LogWarning("MaxGameSpeeches: "+this.MaxGameSpeeches+" .Event for this vampire is full");
     }
 
 
 
     void Update()
     {
-        Debug.Log("[" + (linkedGameEvent[0] != null) + "," + (linkedGameEvent[1] != null) + "]");
         for (int i = 0; i< MaxGameSpeeches; i++)
         {
             if (linkedGameEvent[i] != null && speechCanvas[i] == null)

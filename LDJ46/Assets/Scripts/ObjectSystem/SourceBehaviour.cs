@@ -8,6 +8,8 @@ public class SourceBehaviour : MonoBehaviour
     public ItemsSingleton.ItemType objectType;
     public GameObject prefab;
 
+    private AudioSource machineAudio;
+
     public float rechargingSeconds = 5.0f;
     private float rechargingTimer = 0.0f;
     private bool objectAvailable;
@@ -21,6 +23,7 @@ public class SourceBehaviour : MonoBehaviour
 
     void Awake()
     {
+        machineAudio = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
         
     }
@@ -37,6 +40,9 @@ public class SourceBehaviour : MonoBehaviour
 
         if (recharging)
         {
+            machineAudio.loop = true;
+            if (!machineAudio.isPlaying) machineAudio.Play();
+
             rechargingTimer += Time.deltaTime;
             if (rechargingTimer >= rechargingSeconds)
             {
@@ -44,7 +50,7 @@ public class SourceBehaviour : MonoBehaviour
                 objectAvailable = true;
                 recharging = false;
 
-              
+                machineAudio.Stop();  
 
                 rechargingTimer = 0.0f;
             }

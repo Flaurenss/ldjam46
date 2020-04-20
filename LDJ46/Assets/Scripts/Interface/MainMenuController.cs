@@ -7,7 +7,10 @@ public class MainMenuController : MonoBehaviour
 
     void Awake()
     {
-        eventsManager = GameObject.Find("EventsManager").GetComponent<EventsManager>();
+        var aux = GameObject.Find("EventsManager");
+        if (aux == null) return;
+
+        eventsManager = aux.GetComponent<EventsManager>();
         eventsManager.gameEventFailed.AddListener(LoadGameOver);
     }
 
@@ -23,7 +26,7 @@ public class MainMenuController : MonoBehaviour
 
     public void LoadGame()
     {
-        SceneManager.LoadScene("MainGame");
+        SceneManager.LoadScene("Main");
     }
 
     public void LoadMainMenu()

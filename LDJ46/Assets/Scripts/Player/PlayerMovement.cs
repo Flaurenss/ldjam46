@@ -13,17 +13,28 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Sprite bloodSprite;
     [SerializeField] private Sprite pillsSprite;
 
+    private AudioSource audioSource;
     private Sprite _movementSprite;
     private Pocket _playerPocket;
 
     private void Awake()
     {
         _playerPocket = GetComponent<Pocket>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void MovePlayer(Vector3 movement)
     {
-        // if (movement == Vector3.zero) return;
+        if (movement.magnitude == 0)
+        {
+            audioSource.Stop();
+        } 
+        else if (!audioSource.isPlaying)
+        {
+            audioSource.loop = true;
+            audioSource.Play();
+        }
+
         if (movement.magnitude > 1) movement = movement.normalized;
         CheckSpriteType(movement);
         CheckPlayerOrientation(movement);

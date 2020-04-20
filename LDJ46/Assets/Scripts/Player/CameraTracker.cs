@@ -21,15 +21,24 @@ public class CameraTracker : MonoBehaviour
 
         if (distance > 0)
         {
-            Vector3 newCameraPos = transform.position + (Vector3)cameraMoveDir * (distance * cameraSpeed * Time.deltaTime);
-            float distanceAfterMoving = Vector3.Distance(newCameraPos, target.transform.position);
-            //Save check if game has low framerate
-            if (distanceAfterMoving > distance)
-            {
-                newCameraPos = target.transform.position;
-            }
-            //Always z = -1 in order to have in frustum the scene elements
-            transform.position = new Vector3(newCameraPos.x,newCameraPos.y,-1f);
+            Vector3 lerp = 
+                Vector3.MoveTowards
+                    (this.transform.position, 
+                     this.target.position, 
+                     Time.fixedDeltaTime * cameraSpeed);
+
+
+            transform.position = new Vector3(lerp.x, lerp.y, this.transform.position.z);
+
+            //Vector3 newCameraPos = transform.position + (Vector3)cameraMoveDir * (distance * cameraSpeed * Time.deltaTime);
+            //float distanceAfterMoving = Vector3.Distance(newCameraPos, target.transform.position);
+            ////Save check if game has low framerate
+            //if (distanceAfterMoving > distance)
+            //{
+            //    newCameraPos = target.transform.position;
+            //}
+            ////Always z = -1 in order to have in frustum the scene elements
+            //transform.position = new Vector3(newCameraPos.x,newCameraPos.y,-1f);
         }
     }
 }

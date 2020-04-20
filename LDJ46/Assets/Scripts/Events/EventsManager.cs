@@ -47,7 +47,8 @@ public class EventsManager : MonoBehaviour
 
     void Awake()
     {
-        DontDestroyOnLoad(this.gameObject);
+        //DontDestroyOnLoad(this.gameObject);
+        this.startEvents();
     }
 
     /*** Game Flow ***/
