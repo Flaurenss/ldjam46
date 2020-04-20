@@ -39,7 +39,10 @@ public class FadeController : MonoBehaviour
             {
                 spriteRenderer.color = new Color(255, 255.0f * expiration, 255.0f * expiration, expiration);
             }
-        }        
+        }
+        else {
+                spriteRenderer.color = new Color(255, 255.0f, 255.0f, 1);
+        }     
     }
 
     GameEvent oldestGameEvent()
