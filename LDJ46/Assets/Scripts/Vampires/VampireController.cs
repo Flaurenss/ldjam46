@@ -18,10 +18,12 @@ namespace LorenzoResources.Scripts.Vampire
         private bool _canMove = true;
         private bool _collisionPlayer = false;
         private Rigidbody2D _rb;
+        private SpriteRenderer vampireSprite;
 
 
         private void Awake()
         {
+            vampireSprite = GetComponent<SpriteRenderer>();
             _actualTime = 0f;
             _rb = GetComponent<Rigidbody2D>();
             rndDirections = new Vector2[]
@@ -69,16 +71,21 @@ namespace LorenzoResources.Scripts.Vampire
             {
                 GetRandomDirection();
             }
+            FlipVampireSprite(newDir);
             return newDir;
         }
-        
+
+        private void FlipVampireSprite(Vector2 dir)
+        {
+            if (dir == Vector2.right) vampireSprite.flipX = false;
+            if (dir == Vector2.left) vampireSprite.flipX = true;
+        }
         private void OnCollisionEnter2D(Collision2D other)
         {
             if (!other.gameObject.CompareTag("Player"))
             {
                 var old = _previousDir;
                 var dirCollision = -other.contacts[0].normal;
-                Debug.Log(-other.contacts[0].normal);
                 _newDirNeed = true;
             }
             else
