@@ -45,6 +45,11 @@ public class EventsManager : MonoBehaviour
     bool m_eventsActive = false;
 
 
+    void Awake()
+    {
+        DontDestroyOnLoad(this.gameObject);
+    }
+
     /*** Game Flow ***/
     void Update()
     {

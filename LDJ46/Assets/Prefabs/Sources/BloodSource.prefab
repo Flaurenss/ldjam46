@@ -92,6 +92,16 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 0.98
       objectReference: {fileID: 0}
+    - target: {fileID: 2170947928135392186, guid: 920ee596c6a39274780a5f8562dc76db,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -224982875
+      objectReference: {fileID: 0}
+    - target: {fileID: 2170947928135392186, guid: 920ee596c6a39274780a5f8562dc76db,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: -2
+      objectReference: {fileID: 0}
     - target: {fileID: 2170947928135392187, guid: 920ee596c6a39274780a5f8562dc76db,
         type: 3}
       propertyPath: m_LocalPosition.x
