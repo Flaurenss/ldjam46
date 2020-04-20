@@ -9,7 +9,7 @@ public class VampireGameEventRef : MonoBehaviour
     public GameObject prefabBloodCanvas;
     public GameObject prefabPillsCanvas;
 
-    public Vector3[] offset = { new Vector3(0, 0), new Vector3(-2, 0) };
+    public Vector3[] offset = { new Vector3(0, 0), new Vector3(-0.25f, 0) };
     public bool [] flip = { false, true };
     private GameEvent [] linkedGameEvent = { null, null };
     private GameObject [] speechCanvas = { null, null };
