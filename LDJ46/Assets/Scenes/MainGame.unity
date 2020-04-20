@@ -876,6 +876,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Generic_Vampire
       objectReference: {fileID: 0}
+    - target: {fileID: 594953523781073697, guid: 32fe28a424dce3643b47bce34e19bfd7,
+        type: 3}
+      propertyPath: vampireSpeed
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 594953523781073727, guid: 32fe28a424dce3643b47bce34e19bfd7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1089,6 +1094,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Generic_Vampire (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 594953523781073697, guid: 32fe28a424dce3643b47bce34e19bfd7,
+        type: 3}
+      propertyPath: freqToMove
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 594953523781073697, guid: 32fe28a424dce3643b47bce34e19bfd7,
+        type: 3}
+      propertyPath: vampireSpeed
+      value: 1.8
+      objectReference: {fileID: 0}
     - target: {fileID: 594953523781073727, guid: 32fe28a424dce3643b47bce34e19bfd7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1227,6 +1242,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Generic_Vampire (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 594953523781073697, guid: 32fe28a424dce3643b47bce34e19bfd7,
+        type: 3}
+      propertyPath: freqToMove
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 594953523781073727, guid: 32fe28a424dce3643b47bce34e19bfd7,
         type: 3}
