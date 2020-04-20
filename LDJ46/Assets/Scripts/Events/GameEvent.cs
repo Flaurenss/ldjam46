@@ -1,10 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 [System.Serializable]
+
+
+public class GameUnityEvent : UnityEvent<GameEvent>
+{ 
+}
+
 public class GameEvent
 {
+
+    public GameUnityEvent gameUnityEvent = new GameUnityEvent();
+    
+    public bool Completed { get; set; }
+
+
     [SerializeField]
     public Transform m_target;
 
@@ -20,9 +33,9 @@ public class GameEvent
     private float m_warningSoundThreshold;
 
     public GameEvent(int type, float duration, Transform target, float warningThreshold)
-    {
+    { 
         m_startTime = Time.time;
-
+        Completed = false;
         m_type = type;
         m_duration = duration;
         m_target = target;

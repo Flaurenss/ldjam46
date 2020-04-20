@@ -96,12 +96,16 @@ public class EventsManager : MonoBehaviour
     // <param><c>interactionTarget</c> Transform of the gameObject being interacted with</param>
     public bool checkEventCompletable (int itemId, Transform interactionTarget) {
         foreach (GameEvent gameEvent in m_activeEvents) {
-            if (
-                gameEvent.m_type == itemId && 
+            
+            if (gameEvent.m_type == itemId && 
                 gameEvent.m_target == interactionTarget && 
-                gameEvent.checkExpiration() > 0
-            ) {
+                gameEvent.checkExpiration() > 0) 
+            {
                 completeEvent(gameEvent);
+
+                gameEvent.gameUnityEvent.Invoke(gameEvent);
+                gameEvent.Completed = true;
+                
                 return true;
             }
         }

@@ -5,18 +5,23 @@ using UnityEngine.UI;
 
 public class VampireGameEventRef : MonoBehaviour
 {
-    
+
+
+    private EventsManager eventsManager;
+
     public GameObject prefabBloodCanvas;
     public GameObject prefabPillsCanvas;
 
     public Vector3[] offset = { new Vector3(0, 0), new Vector3(-0.25f, 0) };
     public bool [] flip = { false, true };
-    private GameEvent [] linkedGameEvent = { null, null };
+    public GameEvent [] linkedGameEvent = { null, null };
     private GameObject [] speechCanvas = { null, null };
     
     public int MaxGameSpeeches { get; private set; }
     void Awake()
     {
+
+        eventsManager = GameObject.Find("EventsManager").GetComponent<EventsManager>();
         MaxGameSpeeches = 2;
         for (int i = 0; i<MaxGameSpeeches; i++)
         {
@@ -63,6 +68,7 @@ public class VampireGameEventRef : MonoBehaviour
             if (linkedGameEvent[i] == null)
             {
                 linkedGameEvent[i] = gameEvent;
+                gameEvent.gameUnityEvent.AddListener(OnEventCompleted);
                 return;
             }
         }
@@ -100,6 +106,20 @@ public class VampireGameEventRef : MonoBehaviour
         }
     }
 
+    private void OnEventCompleted(GameEvent gameEvent)
+    {
+        for (int i = 0; i < MaxGameSpeeches; i++)
+        {
+            if (linkedGameEvent[i] == gameEvent)
+            {
+                Debug.Log("Se ha completado un evento mio");
+                linkedGameEvent[i].Completed = true;
+                linkedGameEvent[i] = null;
+            }
+        }
+
+    }
+ 
     private GameObject GetPrefabByType(int idx)
     {
 

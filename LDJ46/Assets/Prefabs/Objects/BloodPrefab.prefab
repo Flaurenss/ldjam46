@@ -7,21 +7,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2510240037563224965, guid: 3e07232570a5e574197590c8a9f8b820,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 0.764151
-      objectReference: {fileID: 0}
-    - target: {fileID: 2510240037563224965, guid: 3e07232570a5e574197590c8a9f8b820,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 0.4577697
-      objectReference: {fileID: 0}
-    - target: {fileID: 2510240037563224965, guid: 3e07232570a5e574197590c8a9f8b820,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 0.4577697
-      objectReference: {fileID: 0}
     - target: {fileID: 2510240037563224966, guid: 3e07232570a5e574197590c8a9f8b820,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -81,11 +66,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BloodPrefab
-      objectReference: {fileID: 0}
-    - target: {fileID: 6192182750582101419, guid: 3e07232570a5e574197590c8a9f8b820,
-        type: 3}
-      propertyPath: type
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e07232570a5e574197590c8a9f8b820, type: 3}
