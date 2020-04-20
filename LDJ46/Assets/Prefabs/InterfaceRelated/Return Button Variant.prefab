@@ -7,6 +7,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2962191119740176204, guid: a21aee04d2954d545a21d5dccf2f5294,
+        type: 3}
+      propertyPath: m_text
+      value: Menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 2962191119740176204, guid: a21aee04d2954d545a21d5dccf2f5294,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2962191119740176204, guid: a21aee04d2954d545a21d5dccf2f5294,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 34.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2962191119740176204, guid: a21aee04d2954d545a21d5dccf2f5294,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2962191119740176204, guid: a21aee04d2954d545a21d5dccf2f5294,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2962191119740176204, guid: a21aee04d2954d545a21d5dccf2f5294,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4909150724640008580, guid: a21aee04d2954d545a21d5dccf2f5294,
         type: 3}
       propertyPath: m_Text
