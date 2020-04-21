@@ -35,7 +35,7 @@ public class PlayerPickInput : MonoBehaviour
         
         
 
-        if (Input.GetKeyDown(interactKey) && closestInteractuable != null)
+        if (Input.GetKeyDown(interactKey) && closestInteractuable != null && pocket.Empty)
         {
             if (closestInteractuable.CompareTag("Pickable"))
             {
